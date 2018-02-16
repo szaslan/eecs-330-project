@@ -1,0 +1,42 @@
+/* Global Stylings */
+
+body {
+  margin: 0px;
+}
+
+#footer {
+  position: relative;
+  top: 90%;
+  width: 100%;
+  height: 10%;
+  background-color: #737373;
+}
+
+
+/*Home Page Stylings*/
+
+#home-page {
+  position: relative;
+  height: 100vh;
+  background-color: #cdcdcd;
+}
+
+/*Log Page Stylings*/
+
+#log-page {
+  position: relative;
+  height: 100vh;
+  background-color: #cdcdcd;
+}
+
+
+/*Stretch Page Stylings*/
+
+#stretch-page {
+  position: relative;
+  height: 100vh;
+  background-color: #cdcdcd;
+}
+
+
+/*Profile Page Stylings*/
