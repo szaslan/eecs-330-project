@@ -29,12 +29,12 @@ The following general procedures will be helpful in successfully working on and 
 Screens we need to build: Home, Log, Stretch
 Footer on all screens with Home, Log, and Stretch tabs
 For Body: using images of front and back and have toggle button to switch between
-Home Screen:
+### Home Screen:
   1. Body heat map of user
   2. Underneath body have buttons for "Previous workout" and "Pain History"
-Stretch Screen:
+### Stretch Screen:
   1.Scroll through options for lower back pain- integrate from YouTube
-Log Screen:
+### Log Screen:
   1. Two initial options: "Log Workout" and "Log Pain"
   2. User clicks "Log Pain"
   3. Taken to new screen with body map and header "Tap area of pain"
