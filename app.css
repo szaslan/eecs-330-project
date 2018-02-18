@@ -4,6 +4,10 @@ body {
   margin: 0px;
 }
 
+#body_image{
+  align-content: center;
+  size: 120px 200px;
+}
 #footer {
   position: relative;
   top: 90%;
@@ -12,6 +16,33 @@ body {
   background-color: #737373;
 }
 
+#home_button {
+  margin-left: 10%;
+  position: relative;
+  top: 80%;
+  display: inline;
+  text-align: left;
+}
+
+#log_button {
+  margin-left: 10%;
+  position: relative;
+  top: 80%;
+  text-align: center;
+  display: inline;
+}
+
+#stretch_button {
+  margin-left: 10%;
+  position: relative;
+  top: 80%;
+  display: inline;
+  text-align: right;
+}
+
+.buttons{
+  margin-left: 10%;
+}
 
 /*Home Page Stylings*/
 

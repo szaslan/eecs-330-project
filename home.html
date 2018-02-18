@@ -2,11 +2,33 @@
     <head>
         <title>Safety Fitness</title>
         <link rel="stylesheet" type="text/css" href="app.css"/>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+        rel="stylesheet">
     </head>
     <body>
         <div id="home-page">
-          <div id="footer">
-
+            <img class="body_image" src ="trim_outline.png" alt = "bodymap">
+            <div id="footer">
+            <div class = "buttons">
+                <div id = "home_button">
+                    <button onclick = "home()">
+                        <i class="material-icons">home</i>
+                    </button>
+                </div>
+                <div id = "log_button">
+                    <a href = "log.html">
+                    <button onclick = "log()">
+                        <i class ="material-icons">mode_edit</i>
+                    </button>
+                    </a>
+                </div>
+                <div id = "stretch_button">
+                    <a href = "stretch.html">
+                    <button onclick = "stretch()">
+                        <i class ="material-icons">fitness_center</i>
+                    </button>
+                    </a>
+                </div>
           </div>
         </div>
    </body>
