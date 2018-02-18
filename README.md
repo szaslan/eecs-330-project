@@ -5,9 +5,10 @@
 2. Always work on a separate branch and commit your changes to that branch. When you are ready to merge with master submit a pull request and wait for peer review before making the final merge.
 
 
-###Part 1
+### Part 1
 Screens we need to build: Home, Log, Stretch
 Footer on all screens with Home, Log, and Stretch tabs
+For Body: using images of front and back and have toggle button to switch between
 Home Screen:
   1. Body heat map of user
   2. Underneath body have buttons for "Previous workout" and "Pain History"
@@ -19,3 +20,5 @@ Log Screen:
   3. Taken to new screen with body map and header "Tap area of pain"
   4. Comment box underneath body: Add details (This is mostly for user's Pain History and doesn't impact search results)
   5. Taken to stretch screen.
+
+Roles: Jeff- log screen, Judy & Emma- Body map/home page and footer, Zack- Stretch screen
