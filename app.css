@@ -4,9 +4,16 @@ body {
   height: 100vh;
 }
 
+::-webkit-scrollbar {
+  background-color: #cdcdcd;
+}
+::-webkit-scrollbar-corner {
+  background-color: #cdcdcd;
+}
+
 #footer {
   position: relative;
-  bottom: 10%;
+  bottom: 0px;
   width: 100%;
   height: 10%;
   background-color: #737373;
@@ -21,20 +28,53 @@ body {
   background-color: red;
 }
 
+#home_button {
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  top: 80%;
+  display: inline;
+}
+
+#log_button {
+  margin-left: 10%;
+  position: relative;
+  top: 80%;
+  text-align: center;
+  display: inline;
+}
+
+#stretch_button {
+  margin-left: 10%;
+  position: relative;
+  top: 80%;
+  display: inline;
+  text-align: right;
+}
+
+.buttons{
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
 /*Home Page Stylings*/
 
 #home-page {
   position: relative;
-  height: 100vh;
+  height: 90vh;
   background-color: #cdcdcd;
+  overflow: scroll;
 }
 
 /*Log Page Stylings*/
 
 #log-page {
   position: relative;
-  height: 100vh;
+  width: 100%;
+  height: 90vh;
+  margin: 0px;
   background-color: #cdcdcd;
+  overflow: scroll;
 }
 
 #log-selection {
@@ -110,7 +150,7 @@ body {
 
 #stretch-page {
   position: relative;
-  height: 100vh;
+  height: 90vh;
   background-color: #cdcdcd;
 }
 
