@@ -19,6 +19,12 @@ body {
   background-color: #737373;
 }
 
+.footer-buttons {
+  position: relative;
+  width: 20%;
+  height: 90%;
+}
+
 .pain-points {
   transform: translate(-50%, -50%);
   position: absolute;
