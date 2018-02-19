@@ -28,8 +28,3 @@ function markPain(e) {
 
 }
 
-
-function showPage(shown, hidden) {
-  document.getElementById(shown).style.display = "block";
-  document.getElementById(hidden).style.display = "hidden"l
-}
