@@ -27,3 +27,9 @@ function markPain(e) {
   document.getElementById("log-pain").appendChild(painPoint);
 
 }
+
+
+function showPage(shown, hidden) {
+  document.getElementById(shown).style.display = "block";
+  document.getElementById(hidden).style.display = "hidden"l
+}
