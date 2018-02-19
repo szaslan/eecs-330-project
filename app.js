@@ -27,3 +27,4 @@ function markPain(e) {
   document.getElementById("log-pain").appendChild(painPoint);
 
 }
+
