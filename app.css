@@ -1,17 +1,25 @@
 /* Global Stylings */
-
 body {
   margin: 0px;
+  height: 100vh;
 }
 
 #footer {
   position: relative;
-  top: 90%;
+  bottom: 10%;
   width: 100%;
   height: 10%;
   background-color: #737373;
 }
 
+.pain-points {
+  transform: translate(-50%, -50%);
+  position: absolute;
+  width: 50px;
+  height: 90px;
+  border-radius: 100%;
+  background-color: red;
+}
 
 /*Home Page Stylings*/
 
@@ -29,6 +37,74 @@ body {
   background-color: #cdcdcd;
 }
 
+#log-selection {
+  display: block;
+  position: relative;
+  top: 45%;
+  transform: translateY(-50%);
+
+}
+
+.selection-buttons {
+  position: relative;
+  width: 60%;
+  height: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 1px solid black;
+  font-size: 3em;
+  margin: 25px 0px;
+}
+
+#log-pain {
+  display: none;
+}
+
+.log-prompts {
+  text-align: center;
+  font-size: 3em;
+  color: #fff;
+  padding: 20px 0px;
+}
+
+#body-map {
+  position: relative;
+  height: 45%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 30px;
+  margin-bottom: 50px;
+
+}
+
+#image-toggle {
+  position: relative;
+  border: 1px solid black;
+  font-size: 2em;
+  width: 25%;
+  height: 3em;
+  margin: 10px 37.5%;
+
+}
+
+#pain-information {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50%;
+  height: 10%;
+  font-size: 2em;
+  margin-top: -20px;
+}
+
+.log-button {
+  position: relative;
+  border: 1px solid black;
+  font-size: 2em;
+  width: 15%;
+  height: 3em;
+  margin: 20px 42.5%;
+}
 
 /*Stretch Page Stylings*/
 
