@@ -7,29 +7,34 @@
     </head>
     <body>
         <div id="home-page">
-            <img class="body_image" src ="trim_outline.png" alt = "bodymap">
+            <img src="front.png" id="body-map" onclick="markPain(event)"/>
+            <button id="image-toggle" onclick="toggleImage()"> Switch to Back </button>
             <div id="footer">
             <div class = "buttons">
                 <div id = "home_button">
                     <button onclick = "home()">
-                        <i class="material-icons">home</i>
+                        <i class="material-icons md-24">home</i>
+                        <p>Home</p>
                     </button>
                 </div>
                 <div id = "log_button">
                     <a href = "log.html">
                     <button onclick = "log()">
-                        <i class ="material-icons">mode_edit</i>
+                        <i class ="material-icons md-24">mode_edit</i>
+                        <p>Log</p>
                     </button>
                     </a>
                 </div>
                 <div id = "stretch_button">
                     <a href = "stretch.html">
                     <button onclick = "stretch()">
-                        <i class ="material-icons">fitness_center</i>
+                        <i class ="material-icons md-24">fitness_center</i>
+                        <p>Stretch</p>
                     </button>
                     </a>
                 </div>
           </div>
         </div>
+    <script src = "app.js"></script>
    </body>
 </html>

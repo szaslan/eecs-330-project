@@ -5,11 +5,14 @@ body {
 }
 
 #body_image{
-  align-content: center;
-  size: 120px 200px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+.material-icons.md-24{
+  font-size: 24px;
 }
 #footer {
-  position: relative;
   top: 90%;
   width: 100%;
   height: 10%;
@@ -17,11 +20,11 @@ body {
 }
 
 #home_button {
-  margin-left: 10%;
+  margin-left: auto;
+  margin-right: auto;
   position: relative;
   top: 80%;
   display: inline;
-  text-align: left;
 }
 
 #log_button {
@@ -41,15 +44,16 @@ body {
 }
 
 .buttons{
-  margin-left: 10%;
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 /*Home Page Stylings*/
 
 #home-page {
   position: relative;
-  height: 100vh;
   background-color: #cdcdcd;
+  height: 100vh;
 }
 
 /*Log Page Stylings*/
@@ -58,6 +62,36 @@ body {
   position: relative;
   height: 100vh;
   background-color: #cdcdcd;
+}
+
+#log-pain {
+  display: none;
+}
+
+.log-prompts {
+  text-align: center;
+  font-size: 3em;
+  color: #fff;
+  padding: 20px 0px;
+}
+
+#body-map {
+  position: relative;
+  height: 45%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 30px;
+  margin-bottom: 50px;
+
+}
+
+#image-toggle {
+  position: relative;
+  border: 1px solid black;
+  font-size: 2em;
+  width: 25%;
+  height: 3em;
+  margin: 10px 37.5%;
 }
 
 
