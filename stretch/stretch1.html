@@ -1,27 +1,55 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Safety Fitness</title>
-	<link rel="stylesheet" type="text/css" href="../app.css"/>
+	<head>
+		<title>Safety Fitness</title>
+		<link rel="stylesheet" type="text/css" href="../app.css"/>
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+		rel="stylesheet">
+	</head>
+	<body>
 
-</head>
-<body>
 
 
+		<div id="stretch-page" >
 
-	<div id="stretch-page" >
+			<div id ="stretch-header">
+				<h3>Knee to Chest Stretch</h3>
+			</div>
 
-		<div id ="stretch-header">
-			<h3>Knee to Chest Stretch</h3>
+			<div id="stretch-video">
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/9hVZ4rc2_3Y" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+			</div>
 		</div>
 
-		<div id="stretch-video">
-			<iframe width="560" height="315" src="https://www.youtube.com/embed/9hVZ4rc2_3Y" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+		<div id="footer">
+			<div class = "buttons">
+				<div id = "home_button">
+					<a href="../index.html">
+						<button >
+								<i class="material-icons" style="font-size: 80px">home</i>
+								<p>Home</p>
+						</button>
+					</a>
+				</div>
+				<div id = "log_button">
+						<a href = "../log.html">
+						<button onclick = "log()">
+								<i class ="material-icons" style="font-size: 80px">mode_edit</i>
+								<p>Log</p>
+						</button>
+						</a>
+				</div>
+				<div id = "stretch_button">
+						<a href = "../stretch.html">
+						<button onclick = "stretch()">
+								<i class ="material-icons" style="font-size: 80px">fitness_center</i>
+								<p>Stretch</p>
+						</button>
+						</a>
+				</div>
+			</div>
 		</div>
-	</div>
 
-
-<div id="footer"></div>
-
-</body>
+	</body>
 </html>
