@@ -1,4 +1,4 @@
-alert("Please open this app using one of the iPhone devices in the toolbar of Chrome's developer tools, that is what we have been using for development.");
+//alert("Please open this app using one of the iPhone devices in the toolbar of Chrome's developer tools, that is what we have been using for development.");
 
 function openLogPage() {
   document.getElementById('log-selection').style.display = "none";
