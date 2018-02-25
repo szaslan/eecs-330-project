@@ -7,53 +7,74 @@
     </head>
     <body>
         <div id="stretch-page" >
-          <h1 id="stretch-header"> Stretches <h1>
-
-
-            <a href="stretch/stretch1.html">
-                <div class="back-stretch">
-                    <h3 class="name">Knee to Chest</h3>
-                </div>
-            </a>
-
-            <a href="stretch/stretch2">
-                <div class="back-stretch">
-                    <h3 class="name">Lying Knee Twist</h3>
-                </div>
-            </a>
-
+          <div id="recommended">
+            <h1 class="stretch-headers"> Recommended </h1>
+            <div id="suggestions-container">
+              <div class="suggestion" onclick="openVideo(0)">
+                <img src="assets/leg-stretch.jpg"/>
+                <h1 class="suggested-titles">Leg Stretch</h1>
+              </div>
+              <div class="suggestion" onclick="openVideo(1)">
+                <img src="assets/lower-back-stretch.jpg"/>
+                <h1 class="suggested-titles">Lower Back Stretch</h1>
+              </div>
+              <div class="suggestion">
+                <h1 class="suggested-titles">Stretch</h1>
+              </div>
+            </div>
+          </div>
+          <div id="muscle-groups">
+            <h1 class="stretch-headers"> Search By Muscle Group </h1>
+            <ul id="muscle-groups-selection">
+              <li>Neck</li>
+              <li>Arms</li>
+              <a onClick="narrowSelection(3)"><li>Lower Back</li></a>
+              <li>Chest</li>
+              <li>Abs</li>
+              <li>Hips</li>
+              <li>Legs</li>
+            </ul>
+            <ul id="back-stretch-selection">
+              <li onclick="openVideo(2)">Child's Pose</li>
+              <li onclick="openVideo(3)">Cat/Cow Stretch</li>
+              <li onclick="openVideo(4)">Lower-Back Twist</li>
+              <li onclick="openVideo(5)">Knee-to-Chest Stretch</li>
+              <li onclick="openVideo(6)">The Pelvic Tilt</li>
+            </ul>
+            <div id="video-modal" onclick="closeModal()">
+              <iframe id="open-video" style="position: relative; left: 50%; top: 30%; transform: translate(-50%, -50%)" width="800" height="450" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
+          </div>
 
         </div>
 
 
 
-      <div id="footer">
-        <div class = "buttons">
-          <div id = "home_button">
-            <a href="index.html">
-              <button class="footer-buttons">
-                  <i class="material-icons" style="font-size: 80px">home</i>
-                  <p>Home</p>
-              </button>
-            </a>
-          </div>
-          <div id = "log_button">
-              <a href = "log.html">
-              <button class="footer-buttons">
-                  <i class ="material-icons" style="font-size: 80px">mode_edit</i>
-                  <p>Log</p>
-              </button>
+        <div id="footer">
+          <div class = "buttons">
+            <div id = "home_button">
+              <a href="index.html">
+                <button class="footer-buttons">
+                    <i class="material-icons" style="font-size: 130px">home</i>
+                </button>
               </a>
-          </div>
-          <div id = "stretch_button">
-              <a href = "stretch.html">
-              <button class="footer-buttons">
-                  <i class ="material-icons" style="font-size: 80px">fitness_center</i>
-                  <p>Stretch</p>
-              </button>
-              </a>
+            </div>
+            <div id="log_button">
+                <a href = "log.html">
+                <button class="footer-buttons">
+                    <i class ="material-icons" style="font-size: 130px">mode_edit</i>
+                </button>
+                </a>
+            </div>
+            <div id = "stretch_button">
+                <a href = "stretch.html">
+                <button class="footer-buttons">
+                    <img src="assets/sports.png" class="stretch-icon" style="width: 60%"/>
+                </button>
+                </a>
+            </div>
           </div>
         </div>
-      </div>
+        <script src = "app.js"></script>
    </body>
 </html>
