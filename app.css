@@ -2,7 +2,7 @@
 body {
   margin: 0px;
   height: 100vh;
-  font-family: arial;
+  font-family: 'Roboto', sans-serif;
 }
 
 ::-webkit-scrollbar {
@@ -10,6 +10,11 @@ body {
 }
 ::-webkit-scrollbar-corner {
   background-color: #f2f2f2;
+}
+
+button {
+  font-family: 'Roboto', sans-serif;
+
 }
 
 #footer {
