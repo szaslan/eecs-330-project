@@ -10,7 +10,7 @@ function setText(){
       var currentTime = new Date().toString().slice(0,15);
         var text = localStorage.getItem("exercise");
 
-        document.getElementById('timeline-day').innerHTML = currentTime + " - " + text;
+        document.getElementById('timeline-day').insertAdjacentHTML('beforeend', "<ul> <li>" + currentTime + " - " + text + "</li></ul>");
     
     }
 
