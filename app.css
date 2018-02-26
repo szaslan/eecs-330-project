@@ -130,9 +130,11 @@ button {
   margin: 25px 0px;
 }
 
-#log-pain {
+#log-pain, #log-workout {
   display: none;
 }
+
+
 
 .log-prompts {
   text-align: center;
@@ -180,6 +182,42 @@ button {
   height: 3em;
   margin: 20px 42.5%;
 }
+
+
+/*Log Workout Page Stylings*/
+
+#workout-head {
+  font-size: 4em;
+  text-align: center;  
+}
+
+#workout-prompt {
+  font-size: 3em;
+  text-align: center;
+  margin-top: 10%;
+}
+
+
+#workout-text {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#workout-time {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50%;
+  font-size: 2em;
+  margin-top: -20px;
+  height: 2em;
+  }
+
+  .workout {
+    margin-top: 10%;
+  }
+
+
 
 /*Stretch Page Stylings*/
 

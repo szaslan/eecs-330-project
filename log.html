@@ -2,15 +2,18 @@
     <head>
         <title>Safety Fitness</title>
         <link rel="stylesheet" type="text/css" href="app.css"/>
+
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
         rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
+
+
     </head>
     <body>
         <div id="log-page">
           <div id="log-selection">
-            <button class="selection-buttons"> Log Workout </button>
-            <button class="selection-buttons" onclick="openLogPage()"> Log Pain </button>
+            <button class="selection-buttons" onclick="openWorkoutPage()"> Log Workout </button>
+            <button class="selection-buttons" onclick="openPainPage()"> Log Pain </button>
           </div>
 
           <div id="log-pain">
@@ -20,6 +23,34 @@
             <h1 class="log-prompts"> Can you describe the pain in more detail? </h1>
             <textarea id="pain-information" default="Write more details about the pain you are experiencing here"></textarea>
             <a href="stretch.html"><button class="log-button"> Log </button></a>
+          </div>
+
+          <div id="log-workout">
+            <!--Need to finish design of the Log workout page-->
+            <h1 id="workout-head">Log Your Workout</h1>
+            <div id="workout-type">
+                <h2 id="workout-prompt"> Describe your workout </h2>
+                <textarea id="pain-information"></textarea>
+
+                <h2 id="workout-prompt">How long did you exercise for?</h2>
+                <textarea id="workout-time"></textarea>
+
+                <h2 id="workout-prompt" style="font-size:1em; margin-bottom: 40px;">If applicable, how many sets did you do?</h2>
+                <textarea id="workout-time"></textarea>
+
+                <a ><button class="log-button workout" onclick="logWorkout()"> Log </button></a>
+
+
+
+
+
+
+                
+
+
+
+                </div>
+            </div>
           </div>
 
         </div>
@@ -42,13 +73,14 @@
             <div id = "stretch_button">
                 <a href = "stretch.html">
                 <button class="footer-buttons">
-                    <img src="assets/sports.png" class="stretch-icon" style="width: 60%"/>
+                   <img src="assets/sports.png" class="stretch-icon" style="width: 60%"/>
                 </button>
                 </a>
             </div>
           </div>
         </div>
-        <script src="app.js"></script>
+        <script src="app.js"></script>\
+      
    </body>
 
 </html>
