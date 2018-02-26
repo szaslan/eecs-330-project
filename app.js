@@ -37,14 +37,11 @@ function logWorkout(){
 
 function toggleImage() {
   var currImage = document.getElementById('body-map').attributes.src;
-  var currButton = document.getElementById('image-toggle');
   if (currImage.value == "assets/front.png") {
     currImage.value = "assets/back.png";
-    currButton.innerHTML = "Switch to Front"
   }
   else {
     currImage.value = "assets/front.png";
-    currButton.innerHTML = "Switch to Back";
   }
 
 }
