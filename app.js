@@ -26,3 +26,20 @@ function markPain(e) {
   document.getElementById("log-pain").appendChild(painPoint);
 
 }
+
+function narrowSelection(selection) {
+  document.getElementById('muscle-groups-selection').style.display = 'none';
+  document.getElementById('back-stretch-selection').style.display = 'initial';
+
+}
+
+function openVideo(name) {
+  var stretches = ['https://www.youtube.com/embed/Ms4e1F17eDo', 'https://www.youtube.com/embed/DWmGArQBtFI', 'https://www.youtube.com/embed/V22xxybieHk', 'https://www.youtube.com/embed/ZiNXOE5EsZw', 'https://www.youtube.com/embed/kd8nxvs2R0g', 'https://www.youtube.com/embed/9hVZ4rc2_3Y', 'https://www.youtube.com/embed/_LfxpD4GuEI']
+  document.getElementById('open-video').src= stretches[name];
+  document.getElementById('video-modal').style.display = 'block';
+
+}
+
+function closeModal() {
+  document.getElementById('video-modal').style.display = 'none';
+}

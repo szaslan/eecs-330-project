@@ -2,6 +2,7 @@
 body {
   margin: 0px;
   height: 100vh;
+  font-family: arial;
 }
 
 ::-webkit-scrollbar {
@@ -16,7 +17,8 @@ body {
   bottom: 0px;
   width: 100%;
   height: 10%;
-  background-color: #e0e0e0;
+  background-color: #f2f2f2;
+  box-shadow: 0px -1px 0 #cdcdcd;
 }
 
 .footer-buttons {
@@ -157,6 +159,7 @@ body {
   font-size: 3em;
   color: #6b6b6b;
   padding: 20px 0px;
+  font-family: arial;
 }
 
 #body-map {
@@ -201,41 +204,100 @@ body {
 #stretch-page {
   position: relative;
   height: 90vh;
-  background-color: #cdcdcd;
+  background-color: #f2f2f2;
 }
 
-#stretch-header {
-  font-size: 5em;
-  text-align: center;
+.stretch-headers {
+  position: relative;
+  font-size: 4em;
+  margin: 0 16px;
+  top: 16px;
 }
 
-.back-stretch {
-  border: 1px solid black;
-  width: 60%;
-  margin: 50px auto;
-
+#recommended {
+  height: 40%;
+  box-shadow: 0 1px 0 #cdcdcd;
 }
 
-.name {
-  margin: auto;
-  text-align: center;
+#suggestions-container {
+  display: flex;
+  position: relative;
+  height: 80%;
+  width: 100%;
+  top: 45%;
+  transform: translateY(-50%);
+  overflow: scroll;
 }
 
-
-#stretch-video {
-  position: absolute;
-  margin: auto;
+.suggestion {
+  position: relative;
+  width: 470px;
+  height: 470px;
+  background-color: red;
+  margin: 0 25px;
   top: 50%;
+  transform: translateY(-50%);
+  flex-shrink: 0;
+}
+
+.suggested-titles {
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0,0,0,0.4);
+  width: 100%;
+  color: #fff;
+}
+
+#muscle-groups {
+  position: relative;
+  height: 60%;
+}
+
+#muscle-groups-selection {
+  position: absolute;
+  list-style-type: none;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
+  font-size: 4em;
+  width: 90%;
+  overflow: hidden;
+
 }
 
-a, a:visited, a:active {
-  color: inherit;
-  text-decoration: none;
+#back-stretch-selection {
+  position: absolute;
+  display: none;
+  list-style-type: none;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 4em;
+  width: 90%;
+  overflow: hidden;
 }
 
+#video-modal {
+  position: absolute;
+  display: none;
+  top: -66.7%;
+  z-index: 1;
+  background-color: rgba(0,0,0,0.8);
+  height: 90vh;
+  width: 100%;
 
+}
 
+li {
+  margin-bottom: 15px;
+  border-bottom: 1px solid black;
+  width: 95%;
+}
+
+li:hover {
+  background-color: rgba(0,0,0,0.4)
+}
 
 /*Profile Page Stylings*/
