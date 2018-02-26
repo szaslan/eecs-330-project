@@ -4,10 +4,17 @@
 //log workout functions
 
 function setText(){
-  var currentTime = new Date().toString().slice(0,15);
-  var text = localStorage.getItem("exercise");
 
-  document.getElementById('timeline-day').innerHTML = currentTime + " - " + text;
+  if (localStorage.getItem("exercise") !== null)
+    {
+      var currentTime = new Date().toString().slice(0,15);
+        var text = localStorage.getItem("exercise");
+
+        document.getElementById('timeline-day').innerHTML = currentTime + " - " + text;
+    
+    }
+
+
 }
 
 function openPainPage() {
