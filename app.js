@@ -1,5 +1,15 @@
 //alert("Please open this app using one of the iPhone devices in the toolbar of Chrome's developer tools, that is what we have been using for development.");
 
+
+//log workout functions
+
+function setText(){
+  var currentTime = new Date().toString().slice(0,15);
+  var text = localStorage.getItem("exercise");
+
+  document.getElementById('timeline-day').innerHTML = currentTime + " - " + text;
+}
+
 function openPainPage() {
   document.getElementById('log-selection').style.display = "none";
   document.getElementById('log-pain').style.display = "block";
@@ -12,8 +22,11 @@ function openWorkoutPage() {
 
 
 function logWorkout(){
-  document.getElementById('timeline-day').innerHTML = "";
+  localStorage.setItem('exercise','30 minute run');
 }
+
+
+//log pain functions
 
 function toggleImage() {
   var currImage = document.getElementById('body-map').attributes.src;
@@ -38,6 +51,7 @@ function markPain(e) {
   document.getElementById("log-pain").appendChild(painPoint);
 
 }
+//strech functions
 
 function narrowSelection(selection) {
   document.getElementById('muscle-groups-selection').style.display = 'none';
