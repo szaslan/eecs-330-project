@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Safety Fitness</title>
+	    <link rel="stylesheet" type="text/css" href="app.css"/>
+
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+        rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
+</head>
+<body>
+	<div id="home-page" style="height: 100%;">
+		<div id="login-title">
+			<h1>Safety First Fitness</h1>
+		</div>
+
+		<div id ="login" style="width: 100%;">
+			<i class="material-icons" id ="login-icon">account_circle</i>
+		</div>
+
+
+		<div id="login-form">
+			<form>
+
+
+				<!--Input for current users that have an account -->
+				<!--need to make functions to display page and store info in localStorage-->
+
+				<input type="text" placeholder="username" value="" class="login-inputs" id="login-user" />
+				<input type="password" placeholder="password" value="" class="login-inputs" id="login-pass" />
+
+	
+				<!--button that hides previous form and displays create account form -->
+				
+
+			</form>
+
+				<a href="index.html" id="login-next" onclick="checkInputLogin()">
+					<button class= "button-global login-button login" >
+						<p class= "button-text">Login</p>
+					</button> 
+				</a>
+		
+
+			<button class="button-global login-button create" onclick="changeForm()" >
+				<p class="button-text">New? <br /> Create your account.</p>
+			</button> 
+		</div>
+
+		
+
+		<!--Register account form -->
+		<!--need to make functions to display page and store info in localStorage-->
+
+		<div id="create-form">
+			<form >
+				<input type="text" placeholder="Create username" value="" class="login-inputs" id="create-user" />
+				<input type="password" placeholder="Create password" value="" class="login-inputs" id="create-pass" /> 
+							
+
+			</form>
+
+			<a href = "index.html"  id="create-next" onclick="checkInputCreate()">
+				<button class="button-global login-button login" onclick="changeForm()" >
+					<p class="button-text">Create your account!</p>
+				</button> 
+			</a>
+
+
+		</div>
+
+	</div>
+
+
+
+
+
+    <script src="app.js"></script>\
+
+</body>
+</html>

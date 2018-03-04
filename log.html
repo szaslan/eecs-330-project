@@ -10,17 +10,17 @@
     <body>
         <div id="log-page">
           <div id="log-selection">
-            <button class="selection-buttons" onclick="openWorkoutPage()"> Log Workout </button>
-            <button class="selection-buttons" onclick="openPainPage()"> Log Pain </button>
+            <button class="selection-buttons button-global" onclick="openWorkoutPage()"> Log Workout </button>
+            <button class="selection-buttons button-global" onclick="openPainPage()"> Log Pain </button>
           </div>
 
           <div id="log-pain">
             <h1 class="log-prompts"> Where have you been feeling pain? </h1>
             <img src="assets/front.png" id="body-map" onclick="markPain(event)"/>
-            <button id="image-toggle" onclick="toggleImage()"> Switch to Back </button>
+            <button id="image-toggle" onclick="toggleImage()" > Switch to Back </button>
             <h1 class="log-prompts"> Can you describe the pain in more detail? </h1>
             <textarea id="pain-information" default="Write more details about the pain you are experiencing here"></textarea>
-            <a href="stretch.html"><button class="log-button"> Log </button></a>
+            <a href="stretch.html"><button class="log-button button-global"> Log </button></a>
           </div>
 
           <div id="log-workout">
@@ -36,16 +36,7 @@
                 <h2 id="workout-prompt">If applicable, how many sets did you do?</h2>
                 <textarea id="workout-time"></textarea>
 
-                <a href="stretch.html"><button class="log-button workout" onclick="logWorkout()"> Log </button></a>
-
-
-
-
-
-
-                
-
-
+                <a href="stretch.html"><button class="log-button workout button-global" onclick="logWorkout()"> Log </button></a>
 
                 </div>
             </div>
