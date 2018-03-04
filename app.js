@@ -32,6 +32,35 @@ function logWorkout(){
   localStorage.setItem('exercise','30 minute run');
 }
 
+//login functions
+
+function changeForm(){
+  document.getElementById('login-form').style.display = "none";
+  document.getElementById('create-form').style.display = "block";
+}
+
+function checkInputCreate(){
+  var createUser = document.getElementById('create-user');
+  var createPass = document.getElementById('create-pass');
+
+  if (createUser.value.length == 0 || createPass.value.length == 0){
+    alert("Please enter a username or password.");
+    document.getElementById('create-next').href = "login.html";
+  }
+}
+
+function checkInputLogin(){
+
+  var loginUser = document.getElementById('login-user');
+  var loginPass = document.getElementById('login-pass');
+
+  if (loginUser.value.length == 0 || loginPass.value.length == 0){
+    alert("Please enter a username or password");
+    document.getElementById('login-next').href = "login.html";
+
+  }
+}
+
 
 //log pain functions
 
