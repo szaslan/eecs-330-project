@@ -160,7 +160,7 @@ button {
 
 #body-header{
   font-family: 'Roboto', sans-serif;
-  color: orange;
+  color: #6b6b6b;
   font-style: bold;
   padding-left: 30px;
   font-weight: bold;
@@ -178,8 +178,10 @@ button {
 
 #timeline-header {
   color: #6b6b6b;
-  text-align: center;
+  text-align: left;
   font-size: 40px;
+  padding-top: 30px;
+  padding-left: 30px;
 }
 
 #timeline-container {
@@ -250,7 +252,7 @@ button {
   left: 50%;
   transform: translateX(-50%);
   margin-top: 30px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 
 }
 
