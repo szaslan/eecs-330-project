@@ -182,6 +182,7 @@ button {
 
 #body-header{
   font-family: 'Roboto', sans-serif;
+
   color: black;
   font-style: bold;
   padding-left: 30px;
@@ -197,10 +198,18 @@ button {
   color: black;
   font-size: 30px;
 }
+
 #timeline-header{
   padding-left:30px;
   margin-top:10px;
+
+
+#timeline-header {
+  color: #6b6b6b;
+  text-align: left;
   font-size: 40px;
+  padding-top: 30px;
+  padding-left: 30px;
 }
 #timeline-container {
   position: relative;
@@ -310,7 +319,7 @@ button {
   left: 50%;
   transform: translateX(-50%);
   margin-top: 30px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 
 }
 
