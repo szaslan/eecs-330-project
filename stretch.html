@@ -42,8 +42,13 @@
               <li onclick="openVideo(5)">Knee-to-Chest Stretch</li>
               <li onclick="openVideo(6)">The Pelvic Tilt</li>
             </ul>
-            <div id="video-modal" onclick="closeModal()">
-              <iframe id="open-video" style="position: relative; left: 50%; top: 30%; transform: translate(-50%, -50%)" width="800" height="450" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            <div id="video-modal" >
+              <iframe id="open-video" src="https://www.youtube.com/embed/Ms4e1F17eDo" width="800" height="450" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+              <div id="input-container">
+                <input id="add-comment" value="Add a comment" type="text"></input>
+                <button id="submit-comment">Submit</button>
+              </div>
+              <div id="comment-container"> </div>
             </div>
           </div>
 

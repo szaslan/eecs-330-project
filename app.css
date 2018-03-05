@@ -399,13 +399,56 @@ button {
 
 #video-modal {
   position: absolute;
-  display: none;
+  display: block;
   top: -66.7%;
   z-index: 1;
-  background-color: rgba(0,0,0,0.8);
+  background-color: rgba(0,0,0,1);
   height: 90vh;
   width: 100%;
 
+}
+
+#open-video {
+  position: relative;
+  display: block;
+  left: 50%;
+  top: 20%;
+  transform: translate(-50%,-50%)
+}
+
+#input-container {
+  position: relative;
+  top: 8%;
+}
+
+#add-comment {
+  position: relative;
+  top: 20%;
+  width: 60%;
+  left: 40%;
+  transform: translateX(-50%);
+  height: 70px;
+  font-size: 2em;
+}
+
+#submit-comment {
+  position: relative;
+  top: 10%;
+  left: 13%;
+  width: 15%;
+  height: 70px;
+  background-color: orange;
+  font-size: 2em;
+  color: white;
+}
+
+#comment-container {
+  position: relative;
+  background-color: red;
+  height: 400px;
+  width: 80%;
+  top: 10%;
+  left: 10%;
 }
 
 li {
