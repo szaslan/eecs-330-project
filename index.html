@@ -19,27 +19,26 @@
 		</div>
 
 
-		<div id="login-form">
-			<form>
+		<div id="login-form" >
+			<form action="homepage.html">
 
 
 				<!--Input for current users that have an account -->
 				<!--need to make functions to display page and store info in localStorage-->
 
-				<input type="text" placeholder="username" value="" class="login-inputs" id="login-user" />
-				<input type="password" placeholder="password" value="" class="login-inputs" id="login-pass" />
+
+				<input type="text" placeholder="username" value="" class="login-inputs" id="login-user" required="required" />
+				<input type="password" placeholder="password" value="" class="login-inputs" id="login-pass" required="required"/>
 
 	
 				<!--button that hides previous form and displays create account form -->
-				
+ 					<button class= "button-global login-button login" >
+						<p class= "button-text">Login</p>
+					</button> 
 
 			</form>
 
-				<a href="index.html" id="login-next" onclick="checkInputLogin()">
-					<button class= "button-global login-button login" >
-						<p class= "button-text">Login</p>
-					</button> 
-				</a>
+		
 		
 
 			<button class="button-global login-button create" onclick="changeForm()" >
@@ -53,18 +52,21 @@
 		<!--need to make functions to display page and store info in localStorage-->
 
 		<div id="create-form">
-			<form >
-				<input type="text" placeholder="Create username" value="" class="login-inputs" id="create-user" />
-				<input type="password" placeholder="Create password" value="" class="login-inputs" id="create-pass" /> 
+
+			<form action="homepage.html">
+				<input type="text" placeholder="Create username" value="" class="login-inputs" id="create-user" required="required" />
+				<input type="password" placeholder="Create password" value="" class="login-inputs" id="create-pass" required="required" /> 
+
+
+					<a href = "homepage.html"  id="create-next" >
+						<button class="button-global login-button login">
+							<p class="button-text">Create your account!</p>
+						</button> 
+					</a>
+
 							
 
 			</form>
-
-			<a href = "index.html"  id="create-next" onclick="checkInputCreate()">
-				<button class="button-global login-button login" onclick="changeForm()" >
-					<p class="button-text">Create your account!</p>
-				</button> 
-			</a>
 
 
 		</div>
@@ -75,7 +77,7 @@
 
 
 
-    <script src="app.js"></script>\
+    <script src="app.js"></script>
 
 </body>
 </html>
