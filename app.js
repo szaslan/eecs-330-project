@@ -100,8 +100,7 @@ function markPain(e) {
 function narrowSelection(selection) {
   document.getElementById('muscle-groups-selection').style.display = 'none';
   document.getElementById('back-stretch-selection').style.display = 'initial';
-  document.getElementById('stretch-headers').style.display = 'none';
-  document.getElementById('back-header').style.display = 'initial';
+
 }
 
 function openVideo(name) {
