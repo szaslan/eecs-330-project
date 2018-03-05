@@ -2,7 +2,7 @@
 
 
 //log workout functions
-
+  
 function setText(){
 
   if (localStorage.getItem("exercise") !== null)
@@ -27,6 +27,19 @@ function openWorkoutPage() {
   document.getElementById('log-workout').style.display = "block";
 }
 
+function displayDropdown() {
+
+  var dropdown = document.getElementById('cardio-select');
+  var cardio = document.getElementById('choice1');
+  var strength = document.getElementById('choice2');
+
+  if (cardio.checked) {
+      dropdown.style.display = "flex";
+  } else if (strength.checked) {
+    dropdown.style.display = "none";
+  }
+}
+
 
 function logWorkout(){
   localStorage.setItem('exercise','30 minute run');
@@ -38,29 +51,6 @@ function changeForm(){
   document.getElementById('login-form').style.display = "none";
   document.getElementById('create-form').style.display = "block";
 }
-
-function checkInputCreate(){
-  var createUser = document.getElementById('create-user');
-  var createPass = document.getElementById('create-pass');
-
-  if (createUser.value.length == 0 || createPass.value.length == 0){
-    alert("Please enter a username or password.");
-    document.getElementById('create-next').href = "login.html";
-  }
-}
-
-function checkInputLogin(){
-
-  var loginUser = document.getElementById('login-user');
-  var loginPass = document.getElementById('login-pass');
-
-  if (loginUser.value.length == 0 || loginPass.value.length == 0){
-    alert("Please enter a username or password");
-    document.getElementById('login-next').href = "login.html";
-
-  }
-}
-
 
 //log pain functions
 
@@ -130,5 +120,24 @@ function rightClick() {
     else {
       document.getElementById("timeline-days").innerHTML = ("March " + (date.getDate()-timelineCount));
     }
+//comment
+
+function addComment() {
+  if (document.getElementById("add-comment").value == '' | document.getElementById("add-comment").value == 'Add a comment') {
+    alert("Please submit a real comment.");
+  }
+  if (document.getElementById("add-comment").value != '' & document.getElementById("add-comment").value != 'Add a comment') {
+    var comment = document.createElement("DIV");
+    comment.setAttribute("class", "comment");
+    var name = document.createElement("P");
+    name.setAttribute("class", "comment-name");
+    name.innerHTML = "John";
+    var commentWord = document.createElement("h2");
+    commentWord.innerHTML = document.getElementById("add-comment").value;
+    commentWord.setAttribute("class", "comment-comment")
+    comment.appendChild(name);
+    comment.appendChild(commentWord);
+    document.getElementById("comment-container").appendChild(comment);
+
   }
 }
