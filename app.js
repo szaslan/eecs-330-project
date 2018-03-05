@@ -45,6 +45,27 @@ function logWorkout(){
   localStorage.setItem('exercise','30 minute run');
 }
 
+function popupButton() {
+  var popup = document.getElementById('myPopup');
+  popup.classList.toggle("show");
+}
+
+function popupButton1() {
+    var popup = document.getElementById('myPopup1');
+    popup.classList.toggle("show");
+}
+
+function disable() {
+  document.getElementById("myPopup").addEventListener("click", function() {
+    document.getElementById("myPopup").disabled=true;
+  });
+}
+
+function disable1() {
+  document.getElementById("myPopup1").addEventListener("click", function() {
+    document.getElementById("myPopup1").disabled=true;
+  });
+}
 //login functions
 
 function changeForm(){
