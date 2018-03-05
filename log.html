@@ -17,8 +17,9 @@
           <div id="log-pain">
             <h1 class="log-prompts"> Where have you been feeling pain? </h1>
             <img src="assets/front.png" id="body-map" onclick="markPain(event)"/>
-            <button id="image-toggle" onclick="toggleImage()"> 
-              <img src = "assets/rotate1.png">
+
+            <button id="image-toggle" onclick="toggleImage()" >
+              <img class="reverse-button" src = "assets/rotate1.png">
             </button>
             <h1 class="log-prompts"> Can you describe the pain in more detail? </h1>
             <textarea id="pain-information" default="Write more details about the pain you are experiencing here"></textarea>
@@ -57,7 +58,7 @@
             <div id="log_button">
                 <a href = "log.html">
                 <button class="footer-buttons">
-                    <i class ="material-icons" style="font-size: 130px">mode_edit</i>
+                    <i class ="material-icons" style="font-size: 130px; color: orange">mode_edit</i>
                 </button>
                 </a>
             </div>
@@ -71,7 +72,7 @@
           </div>
         </div>
         <script src="app.js"></script>\
-      
+
    </body>
 
 </html>
