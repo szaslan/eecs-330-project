@@ -1,11 +1,14 @@
 <html>
     <head>
         <title>Safety Fitness</title>
+
         <link rel="stylesheet" type="text/css" href="app.css"/>
 
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
         rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
     </head>
     <body>
         <div id="log-page">
@@ -26,19 +29,50 @@
           <div id="log-workout">
             <!--Need to finish design of the Log workout page-->
             <h1 id="workout-head">Log Your Workout</h1>
-            <div id="workout-type">
-                <h2 id="workout-prompt"> Describe your workout </h2>
-                <textarea id="pain-information"></textarea>
 
-                <h2 id="workout-prompt">How long did you exercise for?</h2>
-                <textarea id="workout-time"></textarea>
+
+            <form>
+
+
+
+                <h2 id="workout-prompt"> What was your workout? </h2>
+                <div id="workout-radio">
+                    <form name="cardio-form">
+                        <input type="radio"  name="workout-type" value="cardio" class="workout-type" id="choice1" onclick="displayDropdown()" />
+                        <label for="choice1">Cardio</label>
+                
+                        <input type="radio"  name="workout-type" value="strength" class="workout-type" id ="choice2" onclick="displayDropdown()"/>
+                        <label for="choice2">Strength</label>
+                    </form>
+
+                </div>
+
+                <div id="cardio-select">
+                        <select id="cardio-dropdown">
+                            <option value="running">Run</option>
+                            <option value = "walk">Walk</option>
+                            <option value="spin">Spin Class</option>
+                            <option value="elliptical">Elliptical</option>
+                        </select>
+                </div>
+
+
+
+
+                
+
+                <h2 id="workout-prompt">How many minutes?</h2>
+                <input type="number" id="workout-time" value="" />
 
                 <h2 id="workout-prompt">If applicable, how many sets did you do?</h2>
-                <textarea id="workout-time"></textarea>
+                <input type="number" id="workout-sets" value="" />
 
                 <a href="stretch.html"><button class="log-button workout button-global" onclick="logWorkout()"> Log </button></a>
 
-                </div>
+            </form>
+
+
+
             </div>
           </div>
 

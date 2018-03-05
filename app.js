@@ -27,6 +27,26 @@ function openWorkoutPage() {
   document.getElementById('log-workout').style.display = "block";
 }
 
+function displayDropdown() {
+
+  var dropdown = document.getElementById('cardio-select');
+  var cardio = document.getElementById('choice1');
+  var strength = document.getElementById('choice2');
+
+
+
+  if (cardio.checked) {
+      dropdown.style.display = "flex";
+  } else if (strength.checked) {
+    dropdown.style.display = "none";
+  }
+
+
+
+
+
+}
+
 
 function logWorkout(){
   localStorage.setItem('exercise','30 minute run');
@@ -39,27 +59,27 @@ function changeForm(){
   document.getElementById('create-form').style.display = "block";
 }
 
-function checkInputCreate(){
-  var createUser = document.getElementById('create-user');
-  var createPass = document.getElementById('create-pass');
+// function checkInputCreate(){
+//   var createUser = document.getElementById('create-user');
+//   var createPass = document.getElementById('create-pass');
 
-  if (createUser.value.length == 0 || createPass.value.length == 0){
-    alert("Please enter a username or password.");
-    document.getElementById('create-next').href = "login.html";
-  }
-}
+//   if (createUser.value.length == 0 || createPass.value.length == 0){
+//     alert("Please enter a username or password.");
+//     document.getElementById('create-next').href = "login.html";
+//   }
+// }
 
-function checkInputLogin(){
+// function checkInputLogin(){
 
-  var loginUser = document.getElementById('login-user');
-  var loginPass = document.getElementById('login-pass');
+//   var loginUser = document.getElementById('login-user');
+//   var loginPass = document.getElementById('login-pass');
 
-  if (loginUser.value.length == 0 || loginPass.value.length == 0){
-    alert("Please enter a username or password");
-    document.getElementById('login-next').href = "login.html";
+//   if (loginUser.value.length == 0 || loginPass.value.length == 0){
+//     alert("Please enter a username or password");
+//     document.getElementById('login-next').href = "login.html";
 
-  }
-}
+//   }
+// }
 
 
 //log pain functions
