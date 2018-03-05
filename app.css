@@ -21,7 +21,9 @@ button {
   background-color: whitesmoke;
 }
 
-
+.reverse-button {
+  width: 45%;
+}
 
 #footer {
   position: relative;
@@ -46,6 +48,26 @@ button {
   border-radius: 100%;
   background-color: red;
 }
+
+.worked-points {
+  transform: translate(-50%, -50%);
+  position: absolute;
+  width: 40px;
+  height: 80px;
+  border-radius: 100%;
+  background-color: rgba(106, 189, 237, 0.8);
+}
+
+.worked-points-long {
+  transform: translate(-50%, -50%);
+  position: absolute;
+  width: 90px;
+  height: 160px;
+  border-radius: 100%;
+  background-color: rgba(106, 189, 237, 0.5);
+}
+
+
 
 #home_button {
   margin-left: auto;
@@ -148,7 +170,7 @@ button {
 /*Home Page Stylings*/
 
 #profile-bar{
-  color:#ffcc80;
+  color: black;
   background-color: darkgray;
   size: 40vh;
   display: flow-root;
@@ -172,7 +194,7 @@ button {
   background-color: #f2f2f2;
   overflow: scroll;
   font-family: 'Roboto', sans-serif;
-  color: orange;
+  color: black;
   font-size: 30px;
 }
 
@@ -186,21 +208,62 @@ button {
 
 #timeline-container {
   position: relative;
+  margin-top: 55px;
   width: 100%;
-  color: orange;
+  color: black;
 }
 
 #timeline-day {
   position: relative;
-  display: block;
+  display: inline-block;
   width: 70%;
-  height: 30%;
+  height: 25%;
   background-color: #e8e8e8;
   left: 50%;
   top: 50%;
   transform: translate(-50%, 0);
   font-size: 1em;
 
+}
+
+#timeline-days {
+  position: relative;
+  text-align: center;
+  margin-top: 5px;
+  font-weight: bold;
+  border-bottom: 1px solid black;
+  width: 80%;
+  left: 50%;
+  transform: translateX(-50%);
+
+}
+
+#pain-logs {
+
+}
+
+.timeline-sections {
+  margin: 0 10px;
+  font-size: 1.5em;
+  font-weight: lighter;
+}
+
+#left-timeline {
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  font-size: 2em;
+  transform: translateY(-50%);
+  display: inline-block;
+}
+
+#right-timeline {
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  font-size: 2em;
+  transform: translateY(-50%);
+  display: inline-block;
 }
 
 /*Log Page Stylings*/
@@ -248,7 +311,7 @@ button {
 
 #body-map {
   position: relative;
-  height: 45%;
+  height: 40%;
   left: 50%;
   transform: translateX(-50%);
   margin-top: 30px;
