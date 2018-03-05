@@ -22,7 +22,11 @@
             </button>
             <h1 class="log-prompts"> Can you describe the pain in more detail? </h1>
             <textarea id="pain-information" default="Write more details about the pain you are experiencing here"></textarea>
-            <a href="stretch.html"><button class="log-button button-global"> Log </button></a>
+            <button class="log-button button-global popup" onclick="popupButton()"> Log 
+              <a href="stretch.html">
+                <span onclick="disable()" class="popuptext" id="myPopup">Ouch! Let's find a stretch.</span>
+              </a>
+          </button>
           </div>
 
           <div id="log-workout">
@@ -37,8 +41,12 @@
 
                 <h2 id="workout-prompt">If applicable, how many sets did you do?</h2>
                 <textarea id="workout-time"></textarea>
-
-                <a href="stretch.html"><button class="log-button workout button-global" onclick="logWorkout()"> Log </button></a>
+                  <button class="log-button workout button-global popup" onclick="popupButton()"> Log 
+                      <a href="stretch.html">
+                        <span onclick="disable()" class="popuptext" id="myPopup">Great job! Now let's stretch.</span>
+                      </a>
+                  </button>
+                </a>
 
                 </div>
             </div>
