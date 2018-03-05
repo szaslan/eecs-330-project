@@ -37,6 +37,12 @@ function popupButton() {
     popup.classList.toggle("show");
 }
 
+function switchStretch() {
+  document.getElementById("myPopup").addEventListener("click", function() {
+    location.href="stretch.html";
+  });
+}
+
 
 //login functions
 
