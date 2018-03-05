@@ -370,7 +370,7 @@ button {
   margin-right: auto;
 }
 
-#workout-time {
+#workout-time, #workout-sets {
   position: relative;
   left: 50%;
   transform: translateX(-50%);
@@ -380,8 +380,36 @@ button {
   height: 2em;
   }
 
+  #workout-radio {
+    display: flex;
+    font-size: 40px;
+    justify-content: center;
+  }
+
+  #cardio-select {
+    display: none;
+    justify-content: center;
+    padding-top: 20px;
+  }
+
+  #cardio-dropdown {
+    font-size: 30px;
+    background-color: white;
+    box-shadow: 2px 2px 1px 0px rgba(0, 0, 0, 0.4);
+  }
+
   .workout {
     margin-top: 10%;
+  }
+
+  label {
+    margin-right: 15px;
+  }
+
+  .workout-type {
+    height: 40px;
+    width: 40px;
+    transition: 0.2s all linear;
   }
 
 
