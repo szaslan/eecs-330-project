@@ -148,7 +148,7 @@ button {
 /*Home Page Stylings*/
 
 #profile-bar{
-  color:#ffcc80;
+  color:black;
   background-color: darkgray;
   size: 40vh;
   display: flow-root;
@@ -355,7 +355,21 @@ button {
   background-color: #f2f2f2;
 }
 
-.stretch-headers {
+#stretch-headers {
+  position: relative;
+  font-size: 4em;
+  margin: 0 16px;
+  top: 16px;
+}
+.stretch-header1{
+  position: relative;
+  font-size: 4em;
+  margin: 0 16px;
+  top: 16px;
+}
+
+#back-header{
+  display: none;
   position: relative;
   font-size: 4em;
   margin: 0 16px;
