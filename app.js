@@ -120,6 +120,8 @@ function rightClick() {
     else {
       document.getElementById("timeline-days").innerHTML = ("March " + (date.getDate()-timelineCount));
     }
+  }
+}
 //comment
 
 function addComment() {
