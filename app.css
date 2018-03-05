@@ -399,10 +399,10 @@ button {
 
 #video-modal {
   position: absolute;
-  display: block;
+  display: none;
   top: -66.7%;
   z-index: 1;
-  background-color: rgba(0,0,0,1);
+  background-color: #f2f2f2; /*rgba(0,0,0,1);*/
   height: 90vh;
   width: 100%;
 
@@ -412,7 +412,7 @@ button {
   position: relative;
   display: block;
   left: 50%;
-  top: 20%;
+  top: 21%;
   transform: translate(-50%,-50%)
 }
 
@@ -444,11 +444,40 @@ button {
 
 #comment-container {
   position: relative;
-  background-color: red;
   height: 400px;
   width: 80%;
   top: 10%;
   left: 10%;
+}
+
+.comment {
+  position: relative;
+  background-color: #f2f2f2;
+  width: 75%;
+  border-radius: 10px;
+  margin: 10px;
+  border-bottom: 1px solid black;
+}
+
+.comment-name {
+  position: relative;
+  margin-bottom: 0;
+  font-size: 1.5em;
+  color: orange;
+  left: 5%;
+}
+
+.comment-comment {
+  position: relative;
+  margin-bottom: none;
+  font-size: 2em;
+  left: 5%;
+}
+
+#back-arrow {
+  position: absolute;
+  top; 2%;
+  font-size: 6em;
 }
 
 li {

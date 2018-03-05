@@ -95,10 +95,32 @@ function narrowSelection(selection) {
 function openVideo(name) {
   var stretches = ['https://www.youtube.com/embed/Ms4e1F17eDo', 'https://www.youtube.com/embed/DWmGArQBtFI', 'https://www.youtube.com/embed/V22xxybieHk', 'https://www.youtube.com/embed/ZiNXOE5EsZw', 'https://www.youtube.com/embed/kd8nxvs2R0g', 'https://www.youtube.com/embed/9hVZ4rc2_3Y', 'https://www.youtube.com/embed/_LfxpD4GuEI']
   document.getElementById('open-video').src= stretches[name];
-  //document.getElementById('video-modal').style.display = 'block';
+  document.getElementById('video-modal').style.display = 'block';
 
 }
 
 function closeModal() {
   document.getElementById('video-modal').style.display = 'none';
+}
+
+//comment
+
+function addComment() {
+  if (document.getElementById("add-comment").value == '' | document.getElementById("add-comment").value == 'Add a comment') {
+    alert("Please submit a real comment.");
+  }
+  if (document.getElementById("add-comment").value != '' & document.getElementById("add-comment").value != 'Add a comment') {
+    var comment = document.createElement("DIV");
+    comment.setAttribute("class", "comment");
+    var name = document.createElement("P");
+    name.setAttribute("class", "comment-name");
+    name.innerHTML = "John";
+    var commentWord = document.createElement("h2");
+    commentWord.innerHTML = document.getElementById("add-comment").value;
+    commentWord.setAttribute("class", "comment-comment")
+    comment.appendChild(name);
+    comment.appendChild(commentWord);
+    document.getElementById("comment-container").appendChild(comment);
+
+  }
 }
