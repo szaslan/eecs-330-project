@@ -197,10 +197,13 @@ button {
   color: black;
   font-size: 30px;
 }
-
+#timeline-header{
+  padding-left:30px;
+  margin-top:10px;
+  font-size: 40px;
+}
 #timeline-container {
   position: relative;
-  margin-top: 55px;
   width: 100%;
   color: black;
 }
@@ -382,7 +385,7 @@ button {
   background-color: #f2f2f2;
 }
 
-.stretch-headers {
+#stretch-headers {
   position: relative;
   font-size: 4em;
   margin: 0 16px;
@@ -428,6 +431,13 @@ button {
 #muscle-groups {
   position: relative;
   height: 60%;
+}
+#back-stretch-header{
+  display: none;
+  position: relative;
+  font-size: 4em;
+  margin: 0 16px;
+  top: 16px;
 }
 
 #muscle-groups-selection {
