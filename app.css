@@ -21,9 +21,7 @@ button {
   background-color: whitesmoke;
 }
 
-.reverse-button {
-  width: 45%;
-}
+
 
 #footer {
   position: relative;
@@ -48,26 +46,6 @@ button {
   border-radius: 100%;
   background-color: red;
 }
-
-.worked-points {
-  transform: translate(-50%, -50%);
-  position: absolute;
-  width: 40px;
-  height: 80px;
-  border-radius: 100%;
-  background-color: rgba(106, 189, 237, 0.8);
-}
-
-.worked-points-long {
-  transform: translate(-50%, -50%);
-  position: absolute;
-  width: 90px;
-  height: 160px;
-  border-radius: 100%;
-  background-color: rgba(106, 189, 237, 0.5);
-}
-
-
 
 #home_button {
   margin-left: auto;
@@ -170,7 +148,7 @@ button {
 /*Home Page Stylings*/
 
 #profile-bar{
-  color: black;
+  color:#ffcc80;
   background-color: darkgray;
   size: 40vh;
   display: flow-root;
@@ -182,8 +160,7 @@ button {
 
 #body-header{
   font-family: 'Roboto', sans-serif;
-
-  color: black;
+  color: #6b6b6b;
   font-style: bold;
   padding-left: 30px;
   font-weight: bold;
@@ -195,14 +172,9 @@ button {
   background-color: #f2f2f2;
   overflow: scroll;
   font-family: 'Roboto', sans-serif;
-  color: black;
+  color: orange;
   font-size: 30px;
 }
-
-#timeline-header{
-  padding-left:30px;
-  margin-top:10px;
-
 
 #timeline-header {
   color: #6b6b6b;
@@ -211,63 +183,24 @@ button {
   padding-top: 30px;
   padding-left: 30px;
 }
+
 #timeline-container {
   position: relative;
   width: 100%;
-  color: black;
+  color: orange;
 }
 
 #timeline-day {
   position: relative;
-  display: inline-block;
+  display: block;
   width: 70%;
-  height: 25%;
+  height: 30%;
   background-color: #e8e8e8;
   left: 50%;
   top: 50%;
   transform: translate(-50%, 0);
   font-size: 1em;
 
-}
-
-#timeline-days {
-  position: relative;
-  text-align: center;
-  margin-top: 5px;
-  font-weight: bold;
-  border-bottom: 1px solid black;
-  width: 80%;
-  left: 50%;
-  transform: translateX(-50%);
-
-}
-
-#pain-logs {
-
-}
-
-.timeline-sections {
-  margin: 0 10px;
-  font-size: 1.5em;
-  font-weight: lighter;
-}
-
-#left-timeline {
-  position: absolute;
-  top: 50%;
-  left: 5%;
-  font-size: 2em;
-  transform: translateY(-50%);
-  display: inline-block;
-}
-
-#right-timeline {
-  position: absolute;
-  top: 50%;
-  right: 5%;
-  font-size: 2em;
-  transform: translateY(-50%);
-  display: inline-block;
 }
 
 /*Log Page Stylings*/
@@ -315,7 +248,7 @@ button {
 
 #body-map {
   position: relative;
-  height: 40%;
+  height: 45%;
   left: 50%;
   transform: translateX(-50%);
   margin-top: 30px;
@@ -422,7 +355,7 @@ button {
   background-color: #f2f2f2;
 }
 
-#stretch-headers {
+.stretch-headers {
   position: relative;
   font-size: 4em;
   margin: 0 16px;
@@ -468,13 +401,6 @@ button {
 #muscle-groups {
   position: relative;
   height: 60%;
-}
-#back-stretch-header{
-  display: none;
-  position: relative;
-  font-size: 4em;
-  margin: 0 16px;
-  top: 16px;
 }
 
 #muscle-groups-selection {

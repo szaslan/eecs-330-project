@@ -10,8 +10,8 @@ function setText(){
       var currentTime = new Date().toString().slice(0,15);
         var text = localStorage.getItem("exercise");
 
-        document.getElementById('workout-logs').innerHTML = text;
-
+        document.getElementById('timeline-day').insertAdjacentHTML('beforeend', "<ul> <li>" + currentTime + " - " + text + "</li></ul>");
+    
     }
 
 
@@ -79,8 +79,7 @@ function markPain(e) {
 function narrowSelection(selection) {
   document.getElementById('muscle-groups-selection').style.display = 'none';
   document.getElementById('back-stretch-selection').style.display = 'initial';
-  document.getElementById('stretch-headers').style.display = 'none'
-  document.getElementById('back-stretch-header').style.display = 'initial';
+
 }
 
 function openVideo(name) {
@@ -92,34 +91,4 @@ function openVideo(name) {
 
 function closeModal() {
   document.getElementById('video-modal').style.display = 'none';
-}
-
-//timeline functions
-var timelineCount = 0;
-var timelineContent = [{workout: localStorage.getItem("exercise"), pain: "Lower Back Pain"}, {workout: "Bench Press", pain: "No pain logged"}, {workout: "Rock Climb", pain: "Finger pain"}, {workout: "Abs", pain: "No pain logged"}]
-var date = new Date();
-
-function leftClick() {
-  if (timelineCount < timelineContent.length - 1) {
-    timelineCount++;
-    var activity = timelineContent[timelineCount]
-    document.getElementById("pain-logs").innerHTML = activity.pain;
-    document.getElementById("workout-logs").innerHTML = activity.workout;
-    document.getElementById("timeline-days").innerHTML = ("March " + (date.getDate()-timelineCount));
-  }
-}
-
-function rightClick() {
-  if (timelineCount > 0) {
-    timelineCount--;
-    var activity = timelineContent[timelineCount]
-    document.getElementById("pain-logs").innerHTML = activity.pain;
-    document.getElementById("workout-logs").innerHTML = activity.workout;
-    if (timelineCount == 0) {
-      document.getElementById("timeline-days").innerHTML = "Today"
-    }
-    else {
-      document.getElementById("timeline-days").innerHTML = ("March " + (date.getDate()-timelineCount));
-    }
-  }
 }
