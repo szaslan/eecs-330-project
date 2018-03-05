@@ -37,9 +37,9 @@ function popupButton() {
     popup.classList.toggle("show");
 }
 
-function switchStretch() {
+function disable() {
   document.getElementById("myPopup").addEventListener("click", function() {
-    location.href="stretch.html";
+    document.getElementById("myPopup").disabled=true;
   });
 }
 
