@@ -10,8 +10,8 @@ function setText(){
       var currentTime = new Date().toString().slice(0,15);
         var text = localStorage.getItem("exercise");
 
-        document.getElementById('timeline-day').insertAdjacentHTML('beforeend', "<ul> <li>" + currentTime + " - " + text + "</li></ul>");
-    
+        document.getElementById('workout-logs').innerHTML = text;
+
     }
 
 
@@ -45,6 +45,27 @@ function logWorkout(){
   localStorage.setItem('exercise','30 minute run');
 }
 
+function popupButton() {
+  var popup = document.getElementById('myPopup');
+  popup.classList.toggle("show");
+}
+
+function popupButton1() {
+    var popup = document.getElementById('myPopup1');
+    popup.classList.toggle("show");
+}
+
+function disable() {
+  document.getElementById("myPopup").addEventListener("click", function() {
+    document.getElementById("myPopup").disabled=true;
+  });
+}
+
+function disable1() {
+  document.getElementById("myPopup1").addEventListener("click", function() {
+    document.getElementById("myPopup1").disabled=true;
+  });
+}
 //login functions
 
 function changeForm(){
@@ -92,4 +113,55 @@ function openVideo(name) {
 
 function closeModal() {
   document.getElementById('video-modal').style.display = 'none';
+}
+
+//timeline functions
+var timelineCount = 0;
+var timelineContent = [{workout: localStorage.getItem("exercise"), pain: "Lower Back Pain"}, {workout: "Bench Press", pain: "No pain logged"}, {workout: "Rock Climb", pain: "Finger pain"}, {workout: "Abs", pain: "No pain logged"}]
+var date = new Date();
+
+function leftClick() {
+  if (timelineCount < timelineContent.length - 1) {
+    timelineCount++;
+    var activity = timelineContent[timelineCount]
+    document.getElementById("pain-logs").innerHTML = activity.pain;
+    document.getElementById("workout-logs").innerHTML = activity.workout;
+    document.getElementById("timeline-days").innerHTML = ("March " + (date.getDate()-timelineCount));
+  }
+}
+
+function rightClick() {
+  if (timelineCount > 0) {
+    timelineCount--;
+    var activity = timelineContent[timelineCount]
+    document.getElementById("pain-logs").innerHTML = activity.pain;
+    document.getElementById("workout-logs").innerHTML = activity.workout;
+    if (timelineCount == 0) {
+      document.getElementById("timeline-days").innerHTML = "Today"
+    }
+    else {
+      document.getElementById("timeline-days").innerHTML = ("March " + (date.getDate()-timelineCount));
+    }
+  }
+}
+//comment
+
+function addComment() {
+  if (document.getElementById("add-comment").value == '' | document.getElementById("add-comment").value == 'Add a comment') {
+    alert("Please submit a real comment.");
+  }
+  if (document.getElementById("add-comment").value != '' & document.getElementById("add-comment").value != 'Add a comment') {
+    var comment = document.createElement("DIV");
+    comment.setAttribute("class", "comment");
+    var name = document.createElement("P");
+    name.setAttribute("class", "comment-name");
+    name.innerHTML = "John";
+    var commentWord = document.createElement("h2");
+    commentWord.innerHTML = document.getElementById("add-comment").value;
+    commentWord.setAttribute("class", "comment-comment")
+    comment.appendChild(name);
+    comment.appendChild(commentWord);
+    document.getElementById("comment-container").appendChild(comment);
+
+  }
 }

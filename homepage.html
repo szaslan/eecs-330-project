@@ -1,0 +1,69 @@
+<html>
+    <head>
+        <title>Safety Fitness</title>
+        <link rel="stylesheet" type="text/css" href="app.css"/>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+        rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
+    </head>
+    <body onload="setText()">
+      <div id="home-page">
+        <div id="profile-bar">
+          <p>Hi, John!</p>
+        </div>
+        <div id="body-header">
+          <p>Your active muscles:</p>
+        </div>
+        <img src="assets/front.png" id="body-map" onclick="markPain(event)"/>
+
+        <button id="image-toggle" onclick="toggleImage()">
+          <img class="reverse-button" src = "assets/rotate1.png">
+        </button>
+
+        <div class="worked-points" style="top: 390px; left: 396px;"></div>
+        <div class="worked-points" style="top: 390px; left: 564px;"></div>
+        <div class="worked-points-long" style="top: 450px; left: 484px;"></div>
+
+        <div id="timeline-container">
+          <i id="left-timeline" onclick="leftClick()" class="material-icons">keyboard_arrow_left</i>
+          <div id="timeline-day">
+            <h1 id="timeline-days"> Today </h1>
+            <h3 class="timeline-sections"> Pains </h3>
+            <p id="pain-logs">Lower back pain</p>
+            <h3 class="timeline-sections"> Workouts </h3>
+            <p id="workout-logs"> No Workout Logged </p>
+          </div>
+          <i id="right-timeline" onclick="rightClick()" class="material-icons">keyboard_arrow_right</i>
+        </div>
+      </div>
+
+
+      <div id="footer">
+        <div class = "buttons">
+          <div id = "home_button">
+            <a href="homepage.html">
+              <button class="footer-buttons">
+                  <i class="material-icons" style="font-size: 130px; color: orange">home</i>
+
+              </button>
+            </a>
+          </div>
+          <div id="log_button">
+              <a href = "log.html">
+              <button class="footer-buttons">
+                  <i class ="material-icons" style="font-size: 130px">mode_edit</i>
+              </button>
+              </a>
+          </div>
+          <div id = "stretch_button">
+              <a href = "stretch.html">
+              <button class="footer-buttons">
+                  <img src="assets/sports.png" class="stretch-icon" style="width: 60%"/>
+              </button>
+              </a>
+          </div>
+        </div>
+      </div>
+      <script src = "app.js"></script>
+   </body>
+</html>
