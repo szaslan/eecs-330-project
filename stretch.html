@@ -42,8 +42,19 @@
               <li onclick="openVideo(5)">Knee-to-Chest Stretch</li>
               <li onclick="openVideo(6)">The Pelvic Tilt</li>
             </ul>
-            <div id="video-modal" onclick="closeModal()">
-              <iframe id="open-video" style="position: relative; left: 50%; top: 30%; transform: translate(-50%, -50%)" width="800" height="450" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            <div id="video-modal" >
+              <i class="material-icons" id="back-arrow" onclick="closeModal()">keyboard_arrow_left</i>
+              <iframe id="open-video" width="800" height="450" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+              <div id="input-container">
+                <input id="add-comment" value="Add a comment" type="text"></input>
+                <button id="submit-comment" onclick="addComment()" >Submit</button>
+              </div>
+              <div id="comment-container">
+                <div class="comment">
+                  <p class="comment-name"> Steve </p>
+                  <h2 class="comment-comment"> Great video! </h1>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -54,7 +65,7 @@
         <div id="footer">
           <div class = "buttons">
             <div id = "home_button">
-              <a href="index.html">
+              <a href="homepage.html">
                 <button class="footer-buttons">
                     <i class="material-icons" style="font-size: 130px">home</i>
                 </button>
@@ -70,7 +81,7 @@
             <div id = "stretch_button">
                 <a href = "stretch.html">
                 <button class="footer-buttons">
-                    <img src="assets/sports.png" class="stretch-icon" style="width: 60%"/>
+                    <img src="assets/sports2.png" class="stretch-icon" style="width: 60%"/>
                 </button>
                 </a>
             </div>

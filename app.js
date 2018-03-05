@@ -2,7 +2,7 @@
 
 
 //log workout functions
-
+  
 function setText(){
 
   if (localStorage.getItem("exercise") !== null)
@@ -10,8 +10,8 @@ function setText(){
       var currentTime = new Date().toString().slice(0,15);
         var text = localStorage.getItem("exercise");
 
-        document.getElementById('timeline-day').insertAdjacentHTML('beforeend', "<ul> <li>" + currentTime + " - " + text + "</li></ul>");
-    
+        document.getElementById('workout-logs').innerHTML = text;
+
     }
 
 
@@ -25,6 +25,19 @@ function openPainPage() {
 function openWorkoutPage() {
   document.getElementById('log-selection').style.display = "none";
   document.getElementById('log-workout').style.display = "block";
+}
+
+function displayDropdown() {
+
+  var dropdown = document.getElementById('cardio-select');
+  var cardio = document.getElementById('choice1');
+  var strength = document.getElementById('choice2');
+
+  if (cardio.checked) {
+      dropdown.style.display = "flex";
+  } else if (strength.checked) {
+    dropdown.style.display = "none";
+  }
 }
 
 
@@ -59,29 +72,6 @@ function changeForm(){
   document.getElementById('login-form').style.display = "none";
   document.getElementById('create-form').style.display = "block";
 }
-
-function checkInputCreate(){
-  var createUser = document.getElementById('create-user');
-  var createPass = document.getElementById('create-pass');
-
-  if (createUser.value.length == 0 || createPass.value.length == 0){
-    alert("Please enter a username or password.");
-    document.getElementById('create-next').href = "login.html";
-  }
-}
-
-function checkInputLogin(){
-
-  var loginUser = document.getElementById('login-user');
-  var loginPass = document.getElementById('login-pass');
-
-  if (loginUser.value.length == 0 || loginPass.value.length == 0){
-    alert("Please enter a username or password");
-    document.getElementById('login-next').href = "login.html";
-
-  }
-}
-
 
 //log pain functions
 
@@ -122,4 +112,55 @@ function openVideo(name) {
 
 function closeModal() {
   document.getElementById('video-modal').style.display = 'none';
+}
+
+//timeline functions
+var timelineCount = 0;
+var timelineContent = [{workout: localStorage.getItem("exercise"), pain: "Lower Back Pain"}, {workout: "Bench Press", pain: "No pain logged"}, {workout: "Rock Climb", pain: "Finger pain"}, {workout: "Abs", pain: "No pain logged"}]
+var date = new Date();
+
+function leftClick() {
+  if (timelineCount < timelineContent.length - 1) {
+    timelineCount++;
+    var activity = timelineContent[timelineCount]
+    document.getElementById("pain-logs").innerHTML = activity.pain;
+    document.getElementById("workout-logs").innerHTML = activity.workout;
+    document.getElementById("timeline-days").innerHTML = ("March " + (date.getDate()-timelineCount));
+  }
+}
+
+function rightClick() {
+  if (timelineCount > 0) {
+    timelineCount--;
+    var activity = timelineContent[timelineCount]
+    document.getElementById("pain-logs").innerHTML = activity.pain;
+    document.getElementById("workout-logs").innerHTML = activity.workout;
+    if (timelineCount == 0) {
+      document.getElementById("timeline-days").innerHTML = "Today"
+    }
+    else {
+      document.getElementById("timeline-days").innerHTML = ("March " + (date.getDate()-timelineCount));
+    }
+  }
+}
+//comment
+
+function addComment() {
+  if (document.getElementById("add-comment").value == '' | document.getElementById("add-comment").value == 'Add a comment') {
+    alert("Please submit a real comment.");
+  }
+  if (document.getElementById("add-comment").value != '' & document.getElementById("add-comment").value != 'Add a comment') {
+    var comment = document.createElement("DIV");
+    comment.setAttribute("class", "comment");
+    var name = document.createElement("P");
+    name.setAttribute("class", "comment-name");
+    name.innerHTML = "John";
+    var commentWord = document.createElement("h2");
+    commentWord.innerHTML = document.getElementById("add-comment").value;
+    commentWord.setAttribute("class", "comment-comment")
+    comment.appendChild(name);
+    comment.appendChild(commentWord);
+    document.getElementById("comment-container").appendChild(comment);
+
+  }
 }

@@ -1,6 +1,7 @@
 <html>
     <head>
         <title>Safety Fitness</title>
+
         <link rel="stylesheet" type="text/css" href="app.css"/>
 
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
@@ -17,7 +18,10 @@
           <div id="log-pain">
             <h1 class="log-prompts"> Where have you been feeling pain? </h1>
             <img src="assets/front.png" id="body-map" onclick="markPain(event)"/>
-            <button id="image-toggle" onclick="toggleImage()" > Switch to Back </button>
+
+            <button id="image-toggle" onclick="toggleImage()"> 
+              <img src = "assets/rotate1.png">
+            </button>
             <h1 class="log-prompts"> Can you describe the pain in more detail? </h1>
             <textarea id="pain-information" default="Write more details about the pain you are experiencing here"></textarea>
             <button class="log-button button-global popup" onclick="popupButton1(); disable1()"> Log 
@@ -30,23 +34,55 @@
           <div id="log-workout">
             <!--Need to finish design of the Log workout page-->
             <h1 id="workout-head">Log Your Workout</h1>
-            <div id="workout-type">
-                <h2 id="workout-prompt"> Describe your workout </h2>
-                <textarea id="pain-information"></textarea>
 
-                <h2 id="workout-prompt">How long did you exercise for?</h2>
-                <textarea id="workout-time"></textarea>
+
+            <form>
+
+
+
+                <h2 id="workout-prompt"> What was your workout? </h2>
+                <div id="workout-radio">
+                    <form name="cardio-form">
+                        <input type="radio"  name="workout-type" value="cardio" class="workout-type" id="choice1" onclick="displayDropdown()" />
+                        <label for="choice1">Cardio</label>
+                
+                        <input type="radio"  name="workout-type" value="strength" class="workout-type" id ="choice2" onclick="displayDropdown()"/>
+                        <label for="choice2">Strength</label>
+                    </form>
+
+                </div>
+
+                <div id="cardio-select">
+                        <select id="cardio-dropdown">
+                            <option value="running">Run</option>
+                            <option value = "walk">Walk</option>
+                            <option value="spin">Spin Class</option>
+                            <option value="elliptical">Elliptical</option>
+                        </select>
+                </div>
+
+
+
+
+                
+
+                <h2 id="workout-prompt">How many minutes?</h2>
+                <input type="number" id="workout-time" value="" />
 
                 <h2 id="workout-prompt">If applicable, how many sets did you do?</h2>
-                <textarea id="workout-time"></textarea>
-                  <button class="log-button workout button-global popup" onclick="popupButton(); disable()"> Log 
+                 <input type="number" id="workout-sets" value="" />
+
+
+                  <button class="log-button workout button-global popup" onclick="popupButton(); disable(); logWorkout()"> Log 
                       <a href="stretch.html">
                         <span class="popuptext" id="myPopup">Great job! Now let's stretch.</span>
                       </a>
                   </button>
-                </a>
 
-                </div>
+            </form>
+
+
+
             </div>
           </div>
 
@@ -54,7 +90,7 @@
         <div id="footer">
           <div class = "buttons">
             <div id = "home_button">
-              <a href="index.html">
+              <a href="homepage.html">
                 <button class="footer-buttons">
                     <i class="material-icons" style="font-size: 130px">home</i>
                 </button>
@@ -63,7 +99,7 @@
             <div id="log_button">
                 <a href = "log.html">
                 <button class="footer-buttons">
-                    <i class ="material-icons" style="font-size: 130px">mode_edit</i>
+                    <i class ="material-icons" style="font-size: 130px; color: orange">mode_edit</i>
                 </button>
                 </a>
             </div>
@@ -77,7 +113,7 @@
           </div>
         </div>
         <script src="app.js"></script>\
-      
+
    </body>
 
 </html>
