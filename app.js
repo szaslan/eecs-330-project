@@ -11,7 +11,7 @@ function setText(){
         var text = localStorage.getItem("exercise");
 
         document.getElementById('timeline-day').insertAdjacentHTML('beforeend', "<ul> <li>" + currentTime + " - " + text + "</li></ul>");
-    
+
     }
 
 
@@ -91,4 +91,26 @@ function openVideo(name) {
 
 function closeModal() {
   document.getElementById('video-modal').style.display = 'none';
+}
+
+//comment
+
+function addComment() {
+  if (document.getElementById("add-comment").value == '' | document.getElementById("add-comment").value == 'Add a comment') {
+    alert("Please submit a real comment.");
+  }
+  if (document.getElementById("add-comment").value != '' & document.getElementById("add-comment").value != 'Add a comment') {
+    var comment = document.createElement("DIV");
+    comment.setAttribute("class", "comment");
+    var name = document.createElement("P");
+    name.setAttribute("class", "comment-name");
+    name.innerHTML = "John";
+    var commentWord = document.createElement("h2");
+    commentWord.innerHTML = document.getElementById("add-comment").value;
+    commentWord.setAttribute("class", "comment-comment")
+    comment.appendChild(name);
+    comment.appendChild(commentWord);
+    document.getElementById("comment-container").appendChild(comment);
+
+  }
 }
