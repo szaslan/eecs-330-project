@@ -32,6 +32,12 @@ function logWorkout(){
   localStorage.setItem('exercise','30 minute run');
 }
 
+function popupButton() {
+    var popup = document.getElementById('myPopup');
+    popup.classList.toggle("show");
+}
+
+
 //login functions
 
 function changeForm(){
