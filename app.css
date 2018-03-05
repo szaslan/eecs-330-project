@@ -20,6 +20,7 @@ button {
   box-shadow: 2px 2px 1px 0px rgba(0, 0, 0, 0.4);
   background-color: orange;
   border: none;
+  color: white;
 }
 
 .reverse-button {
@@ -454,7 +455,7 @@ button {
 
 /* Add animation (fade in the popup) */
 @-webkit-keyframes fadeIn {
-  from {opacity: 0;} 
+  from {opacity: 0;}
   to {opacity: 1;}
 }
 
