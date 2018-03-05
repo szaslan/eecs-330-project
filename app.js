@@ -48,7 +48,11 @@ function disable() {
   });
 }
 
-
+function disable1() {
+  document.getElementById("myPopup1").addEventListener("click", function() {
+    document.getElementById("myPopup1").disabled=true;
+  });
+}
 //login functions
 
 function changeForm(){
