@@ -31,23 +31,23 @@
 				<input type="text" placeholder="username" value="" class="login-inputs" id="login-user" required="required" />
 				<input type="password" placeholder="password" value="" class="login-inputs" id="login-pass" required="required"/>
 
-	
+
 				<!--button that hides previous form and displays create account form -->
- 					<button class= "button-global login-button login" >
+ 					<button class= "button-global login-button login" onclick="setUsername()">
 						<p class= "button-text">Login</p>
-					</button> 
+					</button>
 
 			</form>
 
-		
-		
+
+
 
 			<button class="button-global login-button create" onclick="changeForm()" >
 				<p class="button-text">New? <br /> Create your account.</p>
-			</button> 
+			</button>
 		</div>
 
-		
+
 
 		<!--Register account form -->
 		<!--need to make functions to display page and store info in localStorage-->
@@ -56,16 +56,16 @@
 
 			<form action="homepage.html">
 				<input type="text" placeholder="Create username" value="" class="login-inputs" id="create-user" required="required" />
-				<input type="password" placeholder="Create password" value="" class="login-inputs" id="create-pass" required="required" /> 
+				<input type="password" placeholder="Create password" value="" class="login-inputs" id="create-pass" required="required" />
 
 
 					<a href = "homepage.html"  id="create-next" >
 						<button class="button-global login-button login">
 							<p class="button-text">Create your account!</p>
-						</button> 
+						</button>
 					</a>
 
-							
+
 
 			</form>
 
