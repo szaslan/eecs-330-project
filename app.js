@@ -4,7 +4,14 @@
 //log workout functions
 currSideIsFront = true;
 
+function setUsername() {
+  var username = document.getElementById('login-user').value;
+  localStorage.setItem('username', username);
+}
+
 function setText(){
+  var username = localStorage.getItem("username");
+  document.getElementById('user-welcome').innerHTML = "Hi, " + username + "!";
 
   if (localStorage.getItem("exercise") !== null)
     {
@@ -26,7 +33,7 @@ function setText(){
           coordinates = coordinates.split(" ");
           for (var i = 0; i < coordinates.length; i+=3) {
             var xPos = coordinates[i];
-            var yPos = Number(coordinates[i + 1].split("px")[0]) + 85;
+            var yPos = Number(coordinates[i + 1].split("px")[0]) + 93;
             var painPoint = document.createElement("DIV");
             if (coordinates[i + 2] == "front") {
               painPoint.setAttribute("class", "pain-points-front pain-points");
@@ -271,7 +278,7 @@ function addComment() {
     comment.setAttribute("class", "comment");
     var name = document.createElement("P");
     name.setAttribute("class", "comment-name");
-    name.innerHTML = "John";
+    name.innerHTML = localStorage.getItem("username");
     var commentWord = document.createElement("h2");
     commentWord.innerHTML = document.getElementById("add-comment").value;
     commentWord.setAttribute("class", "comment-comment")
