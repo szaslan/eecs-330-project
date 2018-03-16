@@ -16,6 +16,7 @@
           </div>
 
           <div id="log-pain">
+            <i class="material-icons" id="back-arrow" onclick="closePainPage()">keyboard_arrow_left</i>
             <h1 class="log-prompts"> Where have you been feeling pain? </h1>
             <img src="assets/front.png" id="body-map" onclick="markPain(event)"/>
 
@@ -24,11 +25,20 @@
             </button>
             <h1 class="log-prompts"> Can you describe the pain in more detail? </h1>
             <textarea id="pain-information" default="Write more details about the pain you are experiencing here"></textarea>
-            <button class="log-button button-global popup" onclick="popupButton1(); disable1()"> Log
+            <button class="log-button button-global popup" onclick="logPain()"> Log  <!--onclick="popupButton1(); disable1(); logPain()"-->
+              <!--
               <a href="stretch.html">
                 <span class="popuptext" id="myPopup1">Ouch! Click here to find a stretch.</span>
-              </a>
+              </a>  -->
           </button>
+          </div>
+
+          <div id="logged-modal" >
+            <a href="log.html"><i class="material-icons" id="back-arrow" style="color: #fff;">keyboard_arrow_left</i></a>
+            <div id="log-popup">
+              <h1 style="position: relative; font-size: 3em; top: 10%;"> You've Logged a Workout! </h1>
+              <a href="stretch.html"><button id="find-stretch-button" class="button-global"> Find a Sretch </button></a>
+            </div>
           </div>
 
           <div id="log-workout">
@@ -41,6 +51,7 @@
 
 
                 <h2 id="workout-prompt"> What was your workout? </h2>
+                <i class="material-icons" id="back-arrow" onclick="closeWorkoutPage()">keyboard_arrow_left</i>
                 <div id="workout-radio">
                     <form name="cardio-form">
                         <input type="radio"  name="workout-type" value="cardio" class="workout-type" id="choice1" onclick="displayDropdown()" />
@@ -54,16 +65,12 @@
 
                 <div id="cardio-select">
                         <select id="cardio-dropdown">
-                            <option value="running">Run</option>
+                            <option value="Run">Run</option>
                             <option value = "walk">Walk</option>
                             <option value="spin">Spin Class</option>
                             <option value="elliptical">Elliptical</option>
                         </select>
                 </div>
-
-
-
-
 
 
                 <h2 id="workout-prompt">How many minutes?</h2>
@@ -73,10 +80,10 @@
                  <input type="number" id="workout-sets" value="" />
 
 
-                  <button class="log-button workout button-global popup" onclick="popupButton(); disable(); logWorkout()"> Log
-                      <a href="stretch.html">
+                  <button class="log-button workout button-global popup" onclick="logWorkout()"> Log
+                    <!--  <a href="stretch.html">
                         <span class="popuptext" id="myPopup">Great job! Click here to find a stretch.</span>
-                      </a>
+                      </a>-->
                   </button>
 
             </form>
@@ -112,7 +119,7 @@
             </div>
           </div>
         </div>
-        <script src="app.js"></script>\
+        <script src="app.js"></script>
 
    </body>
 

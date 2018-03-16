@@ -2,7 +2,8 @@
 
 
 //log workout functions
-  
+currSideIsFront = true;
+
 function setText(){
 
   if (localStorage.getItem("exercise") !== null)
@@ -13,7 +14,30 @@ function setText(){
         document.getElementById('workout-logs').innerHTML = text;
 
     }
+    if (localStorage.getItem("pain") !== null)
+      {
+          currSideIsFront = true
+          var text = localStorage.getItem("pain");
 
+          document.getElementById('pain-logs').innerHTML = text;
+          document.getElementById('pain-logs-details').innerHTML = localStorage.getItem("painDetails");
+
+          var coordinates = localStorage.getItem("painCoordinates");
+          coordinates = coordinates.split(" ");
+          for (var i = 0; i < coordinates.length; i+=3) {
+            var xPos = coordinates[i];
+            var yPos = Number(coordinates[i + 1].split("px")[0]) + 85;
+            var painPoint = document.createElement("DIV");
+            if (coordinates[i + 2] == "front") {
+              painPoint.setAttribute("class", "pain-points-front pain-points");
+            }
+            else {
+              painPoint.setAttribute("class", "pain-points-back pain-points");
+            }
+            painPoint.setAttribute("style", ("top: " + yPos.toString() + "px; left: " + xPos + ';'));
+            document.getElementById("home-page").appendChild(painPoint);
+          }
+      }
 
 }
 
@@ -25,6 +49,16 @@ function openPainPage() {
 function openWorkoutPage() {
   document.getElementById('log-selection').style.display = "none";
   document.getElementById('log-workout').style.display = "block";
+}
+
+function closePainPage() {
+  document.getElementById('log-selection').style.display = "block";
+  document.getElementById('log-pain').style.display = "none";
+}
+
+function closeWorkoutPage() {
+  document.getElementById('log-selection').style.display = "block";
+  document.getElementById('log-workout').style.display = "none";
 }
 
 function displayDropdown() {
@@ -42,7 +76,40 @@ function displayDropdown() {
 
 
 function logWorkout(){
-  localStorage.setItem('exercise','30 minute run');
+  if (document.getElementById('workout-time').value == "") {
+    alert("You cannot submit an empty form!");
+  }
+  else {
+    var workout = document.getElementById("workout-time").value + " Minute " + document.getElementById("cardio-dropdown").value
+    localStorage.setItem('exercise', workout);
+    openLogModal('You Logged a Workout!');
+  }
+}
+
+function logPain(){
+  var painDetails = document.getElementById("pain-information").value
+  var points = document.getElementsByClassName('pain-points');
+  if (points.length == 0) {
+    alert("You cannot submit an empty form!");
+  }
+  else {
+    var side = " front"
+    if (points[0].className.split(" ")[0] !== "pain-points-front") {
+      side = " back"
+    }
+    painCoordinates = points[0].style.left + " " + points[0].style.top + side
+    for (var i = 1; i < points.length; i++) {
+      side = " front"
+      if (points[i].className.split(" ")[0] !== "pain-points-front") {
+        side = " back"
+      }
+      painCoordinates = painCoordinates + " " + points[i].style.left + " " + points[i].style.top + side
+    }
+    localStorage.setItem('pain', "Lower Back Pain");
+    localStorage.setItem('painDetails', painDetails);
+    localStorage.setItem('painCoordinates', painCoordinates);
+    openLogModal('You Logged a Pain!');
+  }
 }
 
 function popupButton() {
@@ -73,9 +140,34 @@ function changeForm(){
   document.getElementById('create-form').style.display = "block";
 }
 
+function openLogModal(type) {
+  document.getElementById('logged-modal').style.display = 'block';
+  document.getElementById('logged-modal').children[1].children[0].innerHTML = type;
+}
 //log pain functions
 
 function toggleImage() {
+  currSideIsFront = !currSideIsFront
+  if (currSideIsFront) {
+    var frontSide =   document.getElementsByClassName("pain-points-front")
+    for (var i = 0; i < frontSide.length; i++) {
+      frontSide[i].style.display = 'block'
+    }
+    var backSide =   document.getElementsByClassName("pain-points-back")
+    for (var i = 0; i < backSide.length; i++) {
+      backSide[i].style.display = 'none'
+    }
+  }
+  else {
+    var backSide =   document.getElementsByClassName("pain-points-back")
+    for (var i = 0; i < backSide.length; i++) {
+      backSide[i].style.display = 'block'
+    }
+    var frontSide =   document.getElementsByClassName("pain-points-front")
+    for (var i = 0; i < frontSide.length; i++) {
+      frontSide[i].style.display = 'none'
+    }
+  }
   var currImage = document.getElementById('body-map').attributes.src;
   if (currImage.value == "assets/front.png") {
     currImage.value = "assets/back.png";
@@ -90,10 +182,20 @@ function markPain(e) {
   var xPos = e.clientX;
   var yPos = e.clientY;
   var painPoint = document.createElement("DIV");
-  painPoint.setAttribute("class", "pain-points");
+  if (currSideIsFront) {
+    painPoint.setAttribute("class", "pain-points-front pain-points");
+  }
+  else {
+    painPoint.setAttribute("class", "pain-points-back pain-points");
+  }
   painPoint.setAttribute("style", ("top: " + yPos.toString() + "px; left: " + xPos.toString() + 'px;'));
   document.getElementById("log-pain").appendChild(painPoint);
-
+  var backSide =   document.getElementsByClassName("pain-points-back")
+  if (!currSideIsFront) {
+    for (var i = 0; i < backSide.length; i++) {
+      backSide[i].style.display = 'block'
+    }
+  }
 }
 //strech functions
 
@@ -102,6 +204,12 @@ function narrowSelection(selection) {
   document.getElementById('back-stretch-selection').style.display = 'initial';
   document.getElementById('stretch-headers').style.display = 'none';
   document.getElementById('back-header').style.display = 'initial';
+}
+function muscleGroups() {
+  document.getElementById('muscle-groups-selection').style.display = 'initial';
+  document.getElementById('back-stretch-selection').style.display = 'none';
+  document.getElementById('stretch-headers').style.display = 'initial';
+  document.getElementById('back-header').style.display = 'none';
 }
 
 function openVideo(name) {
@@ -117,7 +225,7 @@ function closeModal() {
 
 //timeline functions
 var timelineCount = 0;
-var timelineContent = [{workout: localStorage.getItem("exercise"), pain: "Lower Back Pain"}, {workout: "Bench Press", pain: "No pain logged"}, {workout: "Rock Climb", pain: "Finger pain"}, {workout: "Abs", pain: "No pain logged"}]
+var timelineContent = [{workout: localStorage.getItem("exercise"), pain: localStorage.getItem("pain"), painDetails: localStorage.getItem("painDetails")}, {workout: "Bench Press", pain: "No pain logged", painDetails: ""}, {workout: "Rock Climb", pain: "Finger pain", painDetails: "My joints are on fire"}, {workout: "Abs", pain: "No pain logged", painDetails: ""}]
 var date = new Date();
 
 function leftClick() {
@@ -126,6 +234,7 @@ function leftClick() {
     var activity = timelineContent[timelineCount]
     document.getElementById("pain-logs").innerHTML = activity.pain;
     document.getElementById("workout-logs").innerHTML = activity.workout;
+    document.getElementById("pain-logs-details").innerHTML = activity.painDetails;
     document.getElementById("timeline-days").innerHTML = ("March " + (date.getDate()-timelineCount));
   }
 }
@@ -134,8 +243,15 @@ function rightClick() {
   if (timelineCount > 0) {
     timelineCount--;
     var activity = timelineContent[timelineCount]
-    document.getElementById("pain-logs").innerHTML = activity.pain;
-    document.getElementById("workout-logs").innerHTML = activity.workout;
+    if (timelineCount == 0 & activity.pain == null) {
+      document.getElementById("pain-logs").innerHTML = "No Pain Logged"
+      document.getElementById("pain-logs-details").innerHTML = ""
+    }
+    else {
+      document.getElementById("pain-logs").innerHTML = activity.pain;
+      document.getElementById("pain-logs-details").innerHTML = activity.painDetails;
+    }
+    (timelineCount == 0 & activity.workout == null) ? document.getElementById("workout-logs").innerHTML = "No Workout Logged" : document.getElementById("workout-logs").innerHTML = activity.workout;
     if (timelineCount == 0) {
       document.getElementById("timeline-days").innerHTML = "Today"
     }
