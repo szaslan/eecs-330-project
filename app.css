@@ -45,10 +45,14 @@ button {
 .pain-points {
   transform: translate(-50%, -50%);
   position: absolute;
-  width: 50px;
-  height: 90px;
+  width: 40px;
+  height: 80px;
   border-radius: 100%;
   background-color: red;
+}
+
+.pain-points-back {
+  display: none;
 }
 
 .worked-points {
@@ -217,14 +221,14 @@ button {
 
 #timeline-day {
   position: relative;
-  display: inline-block;
   width: 70%;
   height: 25%;
-  background-color: #e8e8e8;
   left: 50%;
   top: 50%;
   transform: translate(-50%, 0);
   font-size: 1em;
+  border-radius: 10px;
+  border: 2px solid black;
 
 }
 
@@ -241,12 +245,33 @@ button {
 }
 
 #pain-logs {
+  color: red;
+}
 
+#workout-logs {
+  color: rgb(106, 189, 237);
+}
+
+#pain-logs-details {
+  text-align: left;
+  margin: 0 20%;
+}
+
+#pain-section {
+  position: relative;
+  width: 50%;
+  text-align: center;
+}
+
+#workout-section {
+  position: relative;
+  width: 50%;
+  text-align: center;
 }
 
 .timeline-sections {
   margin: 0 10px;
-  font-size: 1.5em;
+  font-size: 1.75em;
   font-weight: lighter;
 }
 
@@ -276,7 +301,6 @@ button {
   height: 90vh;
   margin: 0px;
   background-color: #f2f2f2;
-  overflow: scroll;
 }
 
 #log-selection {
@@ -396,6 +420,35 @@ button {
     box-shadow: 2px 2px 1px 0px rgba(0, 0, 0, 0.4);
   }
 
+  #logged-modal {
+    position: absolute;
+    display: none;
+    top: 0;
+    z-index: 1;
+    background-color: rgba(0,0,0,0.9);
+    height: 90vh;
+    width: 100%;
+  }
+
+  #log-popup {
+    position: relative;
+    width: 60%;
+    height: 20%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-align: center;
+  }
+
+#find-stretch-button {
+  position: relative;
+  width: 60%;
+  height: 35%;
+  font-size: 3em;
+  margin: 25px 0px;
+}
+
   .workout {
     margin-top: 10%;
   }
@@ -486,7 +539,7 @@ button {
 #back-header{
   display: none;
   position: relative;
-  font-size: 4em;
+  font-size: 3em;
   margin: 0 16px;
   top: 16px;
 }
@@ -635,7 +688,7 @@ button {
 
 #back-arrow {
   position: absolute;
-  top; 2%;
+  top: 1%;
   font-size: 6em;
 }
 
