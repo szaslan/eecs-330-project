@@ -10,6 +10,20 @@ function setUsername() {
 }
 
 function setText(){
+  var xPos = [455, 524, 492];
+  var yPos = [590, 590, 450];
+
+  if (localStorage.getItem("username") == "Josh") {
+    xPos = [405, 574, 492];
+    yPos = [390, 390, 450];
+  }
+  for (var i = 0; i < 3; i++) {
+    var workedPoint = document.createElement("DIV");
+    workedPoint.setAttribute("class", "worked-points pain-points-front");
+    workedPoint.setAttribute("style", ("top: " + yPos[i].toString() + "px; left: " + xPos[i].toString() + 'px;'));
+    document.getElementById("home-page").appendChild(workedPoint);
+  }
+
   var username = localStorage.getItem("username");
   document.getElementById('user-welcome').innerHTML = "Hi, " + username + "!";
 
@@ -232,7 +246,9 @@ function closeModal() {
 
 //timeline functions
 var timelineCount = 0;
-var timelineContent = [{workout: localStorage.getItem("exercise"), pain: localStorage.getItem("pain"), painDetails: localStorage.getItem("painDetails")}, {workout: "Bench Press", pain: "No pain logged", painDetails: ""}, {workout: "Rock Climb", pain: "Finger pain", painDetails: "My joints are on fire"}, {workout: "Abs", pain: "No pain logged", painDetails: ""}]
+var josh = [{workout: localStorage.getItem("exercise"), pain: localStorage.getItem("pain"), painDetails: localStorage.getItem("painDetails")}, {workout: "Bench Press", pain: "No pain logged", painDetails: ""}, {workout: "Rock Climb", pain: "Finger pain", painDetails: "My joints are on fire"}, {workout: "Abs", pain: "No pain logged", painDetails: ""}]
+var nell = [{workout: localStorage.getItem("exercise"), pain: localStorage.getItem("pain"), painDetails: localStorage.getItem("painDetails")}, {workout: "Leg Press", pain: "No pain logged", painDetails: ""}, {workout: "Body Pump", pain: "Foot pain", painDetails: "My Foot is on fire"}, {workout: "No Workout Logged", pain: "No pain logged", painDetails: ""}]
+var timelineContent = localStorage.getItem("username") == 'Josh' ? josh : nell;
 var date = new Date();
 
 function leftClick() {
